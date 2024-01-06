@@ -34,6 +34,12 @@ class TrackPlayerController extends GetxController {
     super.onInit();
   }
 
+  @override
+  void onClose() {
+    player.dispose();
+    super.onClose();
+  }
+
   Future<void> selectTrack(int index) async {
     try {
       loadingTrack.value = true;

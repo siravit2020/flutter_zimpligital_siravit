@@ -30,14 +30,12 @@ class MainScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          PagedListView<int, TrackData>.separated(
+          PagedListView<int, TrackData>(
             pagingController: trackController.pagingController,
             physics: const BouncingScrollPhysics(),
             padding: EdgeInsets.only(
-              left: Spacing.spacing16,
-              right: Spacing.spacing16,
               bottom: Spacing.spacing16 + Get.mediaQuery.padding.bottom,
-              top: Spacing.spacing16,
+              top: Spacing.spacing04,
             ),
             builderDelegate: PagedChildBuilderDelegate<TrackData>(
               itemBuilder: (context, item, index) {
@@ -64,9 +62,6 @@ class MainScreen extends StatelessWidget {
                   ),
                 );
               },
-            ),
-            separatorBuilder: (context, index) => const SizedBox(
-              height: Spacing.spacing12,
             ),
           ),
           Obx(() {

@@ -16,49 +16,55 @@ class TrackItem extends GetView<TrackPlayerController> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () async {
         await controller.selectTrack(index);
       },
-      child: Row(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(
-              BorderRadiusSet.radius08,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(
+          vertical: 6,
+          horizontal: 16,
+        ),
+        child: Row(
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(
+                BorderRadiusSet.radius08,
+              ),
+              child: ImageFromNetwork(
+                imageUrl: data.album.coverMedium,
+                width: 64,
+                height: 64,
+              ),
             ),
-            child: ImageFromNetwork(
-              imageUrl: data.album.coverMedium,
-              width: 64,
-              height: 64,
+            const SizedBox(
+              width: Spacing.spacing12,
             ),
-          ),
-          const SizedBox(
-            width: Spacing.spacing12,
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Text(
-                  data.title,
-                  style: TextStyleSet.paragraph300.copyWith(
-                    fontWeight: FontWeight.w500,
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    data.title,
+                    style: TextStyleSet.paragraph300.copyWith(
+                      fontWeight: FontWeight.w500,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                Text(
-                  data.artist.name,
-                  style: TextStyleSet.paragraph200.copyWith(
-                    color: ColorPalette.textSecondary,
+                  Text(
+                    data.artist.name,
+                    style: TextStyleSet.paragraph200.copyWith(
+                      color: ColorPalette.textSecondary,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

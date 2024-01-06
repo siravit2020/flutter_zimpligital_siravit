@@ -26,6 +26,12 @@ class TrackController extends GetxController {
     super.onInit();
   }
 
+  @override
+  void onClose() {
+    pagingController.dispose();
+    super.onClose();
+  }
+
   Future<void> _fetchPage(int pageKey) async {
     try {
       final response = await trackRepository.getTrackList(
