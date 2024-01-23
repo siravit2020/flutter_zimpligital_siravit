@@ -41,11 +41,11 @@ Map<String, dynamic> _$$TrackDataImplToJson(_$TrackDataImpl instance) =>
 _$AlbumImpl _$$AlbumImplFromJson(Map<String, dynamic> json) => _$AlbumImpl(
       id: json['id'] as int,
       title: json['title'] as String,
-      cover: json['cover'] as String,
-      coverSmall: json['cover_small'] as String,
-      coverMedium: json['cover_medium'] as String,
-      coverBig: json['cover_big'] as String,
-      coverXl: json['cover_xl'] as String,
+      cover: json['cover'] as String?,
+      coverSmall: json['cover_small'] as String?,
+      coverMedium: json['cover_medium'] as String?,
+      coverBig: json['cover_big'] as String?,
+      coverXl: json['cover_xl'] as String?,
     );
 
 Map<String, dynamic> _$$AlbumImplToJson(_$AlbumImpl instance) =>
@@ -62,11 +62,11 @@ Map<String, dynamic> _$$AlbumImplToJson(_$AlbumImpl instance) =>
 _$ArtistImpl _$$ArtistImplFromJson(Map<String, dynamic> json) => _$ArtistImpl(
       id: json['id'] as int,
       name: json['name'] as String,
-      picture: json['picture'] as String,
-      pictureSmall: json['picture_small'] as String,
-      pictureMedium: json['picture_medium'] as String,
-      pictureBig: json['picture_big'] as String,
-      pictureXl: json['picture_xl'] as String,
+      picture: json['picture'] as String?,
+      pictureSmall: json['picture_small'] as String?,
+      pictureMedium: json['picture_medium'] as String?,
+      pictureBig: json['picture_big'] as String?,
+      pictureXl: json['picture_xl'] as String?,
     );
 
 Map<String, dynamic> _$$ArtistImplToJson(_$ArtistImpl instance) =>

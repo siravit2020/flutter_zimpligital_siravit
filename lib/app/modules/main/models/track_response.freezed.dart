@@ -420,11 +420,11 @@ Album _$AlbumFromJson(Map<String, dynamic> json) {
 mixin _$Album {
   int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  String get cover => throw _privateConstructorUsedError;
-  String get coverSmall => throw _privateConstructorUsedError;
-  String get coverMedium => throw _privateConstructorUsedError;
-  String get coverBig => throw _privateConstructorUsedError;
-  String get coverXl => throw _privateConstructorUsedError;
+  String? get cover => throw _privateConstructorUsedError;
+  String? get coverSmall => throw _privateConstructorUsedError;
+  String? get coverMedium => throw _privateConstructorUsedError;
+  String? get coverBig => throw _privateConstructorUsedError;
+  String? get coverXl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -439,11 +439,11 @@ abstract class $AlbumCopyWith<$Res> {
   $Res call(
       {int id,
       String title,
-      String cover,
-      String coverSmall,
-      String coverMedium,
-      String coverBig,
-      String coverXl});
+      String? cover,
+      String? coverSmall,
+      String? coverMedium,
+      String? coverBig,
+      String? coverXl});
 }
 
 /// @nodoc
@@ -461,11 +461,11 @@ class _$AlbumCopyWithImpl<$Res, $Val extends Album>
   $Res call({
     Object? id = null,
     Object? title = null,
-    Object? cover = null,
-    Object? coverSmall = null,
-    Object? coverMedium = null,
-    Object? coverBig = null,
-    Object? coverXl = null,
+    Object? cover = freezed,
+    Object? coverSmall = freezed,
+    Object? coverMedium = freezed,
+    Object? coverBig = freezed,
+    Object? coverXl = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -476,26 +476,26 @@ class _$AlbumCopyWithImpl<$Res, $Val extends Album>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      cover: null == cover
+      cover: freezed == cover
           ? _value.cover
           : cover // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverSmall: null == coverSmall
+              as String?,
+      coverSmall: freezed == coverSmall
           ? _value.coverSmall
           : coverSmall // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverMedium: null == coverMedium
+              as String?,
+      coverMedium: freezed == coverMedium
           ? _value.coverMedium
           : coverMedium // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverBig: null == coverBig
+              as String?,
+      coverBig: freezed == coverBig
           ? _value.coverBig
           : coverBig // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverXl: null == coverXl
+              as String?,
+      coverXl: freezed == coverXl
           ? _value.coverXl
           : coverXl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -510,11 +510,11 @@ abstract class _$$AlbumImplCopyWith<$Res> implements $AlbumCopyWith<$Res> {
   $Res call(
       {int id,
       String title,
-      String cover,
-      String coverSmall,
-      String coverMedium,
-      String coverBig,
-      String coverXl});
+      String? cover,
+      String? coverSmall,
+      String? coverMedium,
+      String? coverBig,
+      String? coverXl});
 }
 
 /// @nodoc
@@ -530,11 +530,11 @@ class __$$AlbumImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? title = null,
-    Object? cover = null,
-    Object? coverSmall = null,
-    Object? coverMedium = null,
-    Object? coverBig = null,
-    Object? coverXl = null,
+    Object? cover = freezed,
+    Object? coverSmall = freezed,
+    Object? coverMedium = freezed,
+    Object? coverBig = freezed,
+    Object? coverXl = freezed,
   }) {
     return _then(_$AlbumImpl(
       id: null == id
@@ -545,26 +545,26 @@ class __$$AlbumImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      cover: null == cover
+      cover: freezed == cover
           ? _value.cover
           : cover // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverSmall: null == coverSmall
+              as String?,
+      coverSmall: freezed == coverSmall
           ? _value.coverSmall
           : coverSmall // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverMedium: null == coverMedium
+              as String?,
+      coverMedium: freezed == coverMedium
           ? _value.coverMedium
           : coverMedium // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverBig: null == coverBig
+              as String?,
+      coverBig: freezed == coverBig
           ? _value.coverBig
           : coverBig // ignore: cast_nullable_to_non_nullable
-              as String,
-      coverXl: null == coverXl
+              as String?,
+      coverXl: freezed == coverXl
           ? _value.coverXl
           : coverXl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -576,11 +576,11 @@ class _$AlbumImpl implements _Album {
   const _$AlbumImpl(
       {required this.id,
       required this.title,
-      required this.cover,
-      required this.coverSmall,
-      required this.coverMedium,
-      required this.coverBig,
-      required this.coverXl});
+      this.cover,
+      this.coverSmall,
+      this.coverMedium,
+      this.coverBig,
+      this.coverXl});
 
   factory _$AlbumImpl.fromJson(Map<String, dynamic> json) =>
       _$$AlbumImplFromJson(json);
@@ -590,15 +590,15 @@ class _$AlbumImpl implements _Album {
   @override
   final String title;
   @override
-  final String cover;
+  final String? cover;
   @override
-  final String coverSmall;
+  final String? coverSmall;
   @override
-  final String coverMedium;
+  final String? coverMedium;
   @override
-  final String coverBig;
+  final String? coverBig;
   @override
-  final String coverXl;
+  final String? coverXl;
 
   @override
   String toString() {
@@ -645,11 +645,11 @@ abstract class _Album implements Album {
   const factory _Album(
       {required final int id,
       required final String title,
-      required final String cover,
-      required final String coverSmall,
-      required final String coverMedium,
-      required final String coverBig,
-      required final String coverXl}) = _$AlbumImpl;
+      final String? cover,
+      final String? coverSmall,
+      final String? coverMedium,
+      final String? coverBig,
+      final String? coverXl}) = _$AlbumImpl;
 
   factory _Album.fromJson(Map<String, dynamic> json) = _$AlbumImpl.fromJson;
 
@@ -658,15 +658,15 @@ abstract class _Album implements Album {
   @override
   String get title;
   @override
-  String get cover;
+  String? get cover;
   @override
-  String get coverSmall;
+  String? get coverSmall;
   @override
-  String get coverMedium;
+  String? get coverMedium;
   @override
-  String get coverBig;
+  String? get coverBig;
   @override
-  String get coverXl;
+  String? get coverXl;
   @override
   @JsonKey(ignore: true)
   _$$AlbumImplCopyWith<_$AlbumImpl> get copyWith =>
@@ -681,11 +681,11 @@ Artist _$ArtistFromJson(Map<String, dynamic> json) {
 mixin _$Artist {
   int get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  String get picture => throw _privateConstructorUsedError;
-  String get pictureSmall => throw _privateConstructorUsedError;
-  String get pictureMedium => throw _privateConstructorUsedError;
-  String get pictureBig => throw _privateConstructorUsedError;
-  String get pictureXl => throw _privateConstructorUsedError;
+  String? get picture => throw _privateConstructorUsedError;
+  String? get pictureSmall => throw _privateConstructorUsedError;
+  String? get pictureMedium => throw _privateConstructorUsedError;
+  String? get pictureBig => throw _privateConstructorUsedError;
+  String? get pictureXl => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -700,11 +700,11 @@ abstract class $ArtistCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String picture,
-      String pictureSmall,
-      String pictureMedium,
-      String pictureBig,
-      String pictureXl});
+      String? picture,
+      String? pictureSmall,
+      String? pictureMedium,
+      String? pictureBig,
+      String? pictureXl});
 }
 
 /// @nodoc
@@ -722,11 +722,11 @@ class _$ArtistCopyWithImpl<$Res, $Val extends Artist>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? picture = null,
-    Object? pictureSmall = null,
-    Object? pictureMedium = null,
-    Object? pictureBig = null,
-    Object? pictureXl = null,
+    Object? picture = freezed,
+    Object? pictureSmall = freezed,
+    Object? pictureMedium = freezed,
+    Object? pictureBig = freezed,
+    Object? pictureXl = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -737,26 +737,26 @@ class _$ArtistCopyWithImpl<$Res, $Val extends Artist>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      picture: null == picture
+      picture: freezed == picture
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureSmall: null == pictureSmall
+              as String?,
+      pictureSmall: freezed == pictureSmall
           ? _value.pictureSmall
           : pictureSmall // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureMedium: null == pictureMedium
+              as String?,
+      pictureMedium: freezed == pictureMedium
           ? _value.pictureMedium
           : pictureMedium // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureBig: null == pictureBig
+              as String?,
+      pictureBig: freezed == pictureBig
           ? _value.pictureBig
           : pictureBig // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureXl: null == pictureXl
+              as String?,
+      pictureXl: freezed == pictureXl
           ? _value.pictureXl
           : pictureXl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -771,11 +771,11 @@ abstract class _$$ArtistImplCopyWith<$Res> implements $ArtistCopyWith<$Res> {
   $Res call(
       {int id,
       String name,
-      String picture,
-      String pictureSmall,
-      String pictureMedium,
-      String pictureBig,
-      String pictureXl});
+      String? picture,
+      String? pictureSmall,
+      String? pictureMedium,
+      String? pictureBig,
+      String? pictureXl});
 }
 
 /// @nodoc
@@ -791,11 +791,11 @@ class __$$ArtistImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? name = null,
-    Object? picture = null,
-    Object? pictureSmall = null,
-    Object? pictureMedium = null,
-    Object? pictureBig = null,
-    Object? pictureXl = null,
+    Object? picture = freezed,
+    Object? pictureSmall = freezed,
+    Object? pictureMedium = freezed,
+    Object? pictureBig = freezed,
+    Object? pictureXl = freezed,
   }) {
     return _then(_$ArtistImpl(
       id: null == id
@@ -806,26 +806,26 @@ class __$$ArtistImplCopyWithImpl<$Res>
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      picture: null == picture
+      picture: freezed == picture
           ? _value.picture
           : picture // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureSmall: null == pictureSmall
+              as String?,
+      pictureSmall: freezed == pictureSmall
           ? _value.pictureSmall
           : pictureSmall // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureMedium: null == pictureMedium
+              as String?,
+      pictureMedium: freezed == pictureMedium
           ? _value.pictureMedium
           : pictureMedium // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureBig: null == pictureBig
+              as String?,
+      pictureBig: freezed == pictureBig
           ? _value.pictureBig
           : pictureBig // ignore: cast_nullable_to_non_nullable
-              as String,
-      pictureXl: null == pictureXl
+              as String?,
+      pictureXl: freezed == pictureXl
           ? _value.pictureXl
           : pictureXl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -837,11 +837,11 @@ class _$ArtistImpl implements _Artist {
   const _$ArtistImpl(
       {required this.id,
       required this.name,
-      required this.picture,
-      required this.pictureSmall,
-      required this.pictureMedium,
-      required this.pictureBig,
-      required this.pictureXl});
+      this.picture,
+      this.pictureSmall,
+      this.pictureMedium,
+      this.pictureBig,
+      this.pictureXl});
 
   factory _$ArtistImpl.fromJson(Map<String, dynamic> json) =>
       _$$ArtistImplFromJson(json);
@@ -851,15 +851,15 @@ class _$ArtistImpl implements _Artist {
   @override
   final String name;
   @override
-  final String picture;
+  final String? picture;
   @override
-  final String pictureSmall;
+  final String? pictureSmall;
   @override
-  final String pictureMedium;
+  final String? pictureMedium;
   @override
-  final String pictureBig;
+  final String? pictureBig;
   @override
-  final String pictureXl;
+  final String? pictureXl;
 
   @override
   String toString() {
@@ -907,11 +907,11 @@ abstract class _Artist implements Artist {
   const factory _Artist(
       {required final int id,
       required final String name,
-      required final String picture,
-      required final String pictureSmall,
-      required final String pictureMedium,
-      required final String pictureBig,
-      required final String pictureXl}) = _$ArtistImpl;
+      final String? picture,
+      final String? pictureSmall,
+      final String? pictureMedium,
+      final String? pictureBig,
+      final String? pictureXl}) = _$ArtistImpl;
 
   factory _Artist.fromJson(Map<String, dynamic> json) = _$ArtistImpl.fromJson;
 
@@ -920,15 +920,15 @@ abstract class _Artist implements Artist {
   @override
   String get name;
   @override
-  String get picture;
+  String? get picture;
   @override
-  String get pictureSmall;
+  String? get pictureSmall;
   @override
-  String get pictureMedium;
+  String? get pictureMedium;
   @override
-  String get pictureBig;
+  String? get pictureBig;
   @override
-  String get pictureXl;
+  String? get pictureXl;
   @override
   @JsonKey(ignore: true)
   _$$ArtistImplCopyWith<_$ArtistImpl> get copyWith =>

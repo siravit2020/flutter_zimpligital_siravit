@@ -22,6 +22,13 @@ class ImageFromNetwork extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (imageUrl == null) {
+      return Container(
+        color: Colors.grey.shade200,
+        width: width,
+        height: height,
+      );
+    }
     return CachedNetworkImage(
       memCacheWidth: memCacheWidth,
       imageUrl: imageUrl!,

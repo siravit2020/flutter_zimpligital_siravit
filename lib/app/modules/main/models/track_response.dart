@@ -39,11 +39,11 @@ class Album with _$Album {
   const factory Album({
     required int id,
     required String title,
-    required String cover,
-    required String coverSmall,
-    required String coverMedium,
-    required String coverBig,
-    required String coverXl,
+    String? cover,
+    String? coverSmall,
+    String? coverMedium,
+    String? coverBig,
+    String? coverXl,
   }) = _Album;
 
   factory Album.fromJson(Map<String, dynamic> json) => _$AlbumFromJson(json);
@@ -57,11 +57,11 @@ class Artist with _$Artist {
   const factory Artist({
     required int id,
     required String name,
-    required String picture,
-    required String pictureSmall,
-    required String pictureMedium,
-    required String pictureBig,
-    required String pictureXl,
+    String? picture,
+    String? pictureSmall,
+    String? pictureMedium,
+    String? pictureBig,
+    String? pictureXl,
   }) = _Artist;
 
   factory Artist.fromJson(Map<String, dynamic> json) => _$ArtistFromJson(json);
